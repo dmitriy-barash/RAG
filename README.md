@@ -10,3 +10,6 @@ if you have text data then use only "TextLoader", if you have pdf file, use pdfl
 
 Video: https://www.youtube.com/watch?v=qwJ_jXs3wbI
 Repo: https://github.com/dmitriy-barash/RAG
+
+pip uninstall python-magic
+pip install python-magic-bin==0.4.14
