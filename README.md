@@ -8,3 +8,5 @@ pip install openai langchain tiktoken chromadb untructured
 # Create your own dataset under Directory , as I keep my custom data under directory - /mydata (directory name could be anything)
 if you have text data then use only "TextLoader", if you have pdf file, use pdfloader.
 
+Video: https://www.youtube.com/watch?v=qwJ_jXs3wbI
+Repo: https://github.com/dmitriy-barash/RAG

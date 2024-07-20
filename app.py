@@ -1,5 +1,7 @@
 ## Install these packages
-# pip install openai langchain tiktoken chromadb untructured
+# pip install openai langchain tiktoken chromadb unstructured
+# pip install -U langchain-community
+# pip install -U langchain-openai
 
 # Import modules
 import openai
@@ -9,18 +11,21 @@ import sys
 #import class from modules
 
 from langchain.chains import ConversationalRetrievalChain, RetrievalQA
-from langchain.chat_models import ChatOpenAI
-from langchain.document_loaders import TextLoader, DirectoryLoader
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.llms import OpenAI
+from langchain_openai import ChatOpenAI
+from langchain_community.document_loaders import TextLoader, DirectoryLoader
+from langchain_openai import OpenAIEmbeddings
+from langchain_openai import OpenAI
 from langchain.text_splitter import CharacterTextSplitter
-from langchain.vectorstores import Chroma
+from langchain_community.vectorstores import Chroma
 from langchain.indexes import VectorstoreIndexCreator
 from langchain.indexes.vectorstore import VectorStoreIndexWrapper
 
+from dotenv import load_dotenv
+load_dotenv()
+openai_api_key = os.getenv("OPENAI_API_KEY")
 # Generate API KEY from OPENAI website and define as a variable. if you want to hide API key just import "constant"
 # and define API key as constant.APIKEY  
-os.environ["OPENAI_API_KEY"] = ""
+os.environ["OPENAI_API_KEY"] = openai_api_key
 
 
 # This function is used to pass the argument with query.
